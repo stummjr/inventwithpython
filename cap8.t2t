@@ -3,6 +3,7 @@ Fluxogramas
 
 
 %!encoding: utf-8
+%!preproc: `ASCIIART` `Arte com ASCII`
 
 
 
@@ -13,7 +14,7 @@ Fluxogramas
 %    ASCII art
 %    Designing our game by drawing a flow chart before programming.
 - Como jogar Forca.
-- //ASCII art//
+- ASCIIART
 - Projetando nosso jogo através de fluxogramas antes de programar.
 
 
@@ -35,13 +36,109 @@ Caso você nunca tenha jogado o Jogo da Forca antes, vamos primeiro aprender sua
 regras.
 
 
-How to Play "Hangman"
+%How to Play "Hangman"
+=Como jogar o "Jogo da Forca"=
 
-In case you don't know, Hangman is a game for two people that's usually played using paper and pencil. One player thinks of a word, and then draws a blank on the page for each letter in the word. Then the second player tries to guess letters that might be in the word. If they guess correctly, the first player writes the letter in the proper blank. If they guess incorrectly, the first player draws a single body part of the hanging man. If the second player can guess all the letters in the word before the hangman has been completely drawn, they win. But if they can't figure it out in time, the man is hanged and they lose the game!
-Sample Run of "Hangman"
+%In case you don't know, Hangman is a game for two people that's usually played
+%using paper and pencil. One player thinks of a word, and then draws a blank on
+%the page for each letter in the word. Then the second player tries to guess
+%letters that might be in the word. If they guess correctly, the first player
+%writes the letter in the proper blank. If they guess incorrectly, the first
+%player draws a single body part of the hanging man. If the second player can
+%guess all the letters in the word before the hangman has been completely
+%drawn, they win. But if they can't figure it out in time, the man is hanged
+%and they lose the game!
+Caso você não saiba, o Jogo da Forca é um jogo para duas pessoas que é
+normalmente jogado com papel e caneta. Um jogador pensa em uma palavra, e então
+desenha um espaço em branco na página para cada letra da palavra. Então, o
+segundo jogador tenta adivinhar as letras que podem compor a palavra. Se ele
+errar, o primeiro jogador desenha uma única parte do corpo do homem da forca.
+Se o segundo jogador conseguir adivinhar todas as letras na palavra antes que o
+homem da forca tenha sido completamente desenhado, eles ganham. Mas se eles não
+conseguirem descobrir a tempo, o homem é enforcado e eles perdem o jogo.
 
-Here is an example of what the player might see when they run the Hangman program we will write later. The text that the player enters in shown in bold.
-H A N G M A N
+
+%Sample Run of "Hangman"
+=Exemplo de Execução do Jogo da Forca=
+
+%Here is an example of what the player might see when they run the Hangman
+%program we will write later. The text that the player enters in shown in bold.
+Aqui temos um exemplo de o que o jogador deve ver quanto executa o programa do
+Jogo da Forca que iremos escrever mais tarde. O texto que o usuário digita
+aparece em negrito.
+
+%H A N G M A N
+
+%  +---+
+%  |   |
+%      |
+%      |
+%      |
+%      |
+%=========
+%Missed letters:
+%_ _ _
+%Guess a letter.
+%a
+%
+%  +---+
+%  |   |
+%      |
+%      |
+%      |
+%      |
+%=========
+%Missed letters:
+%_ a _
+%Guess a letter.
+%o
+%
+%  +---+
+%  |   |
+%  O   |
+%      |
+%      |
+%      |
+%=========
+%
+%Missed letters: o
+%_ a _
+%Guess a letter.
+%r
+%
+%  +---+
+%  |   |
+%  O   |
+%  |   |
+%      |
+%      |
+%=========
+%
+%Missed letters: or
+%_ a _
+%Guess a letter.
+%t
+%
+%  +---+
+%  |   |
+%  O   |
+%  |   |
+%      |
+%      |
+%=========
+%Missed letters: or
+%_ a t
+%Guess a letter.
+%a
+%You have already guessed that letter. Choose again.
+%Guess a letter.
+%c
+%Yes! The secret word is "cat"! You have won!
+%Do you want to play again? (yes or no)
+%no
+
+```
+JOGO DA FORCA
 
   +---+
   |   |
@@ -50,9 +147,9 @@ H A N G M A N
       |
       |
 =========
-Missed letters:
-_ _ _
-Guess a letter.
+Letras perdidas:
+_ _ _ _
+Adivinhe uma letra:
 a
 
   +---+
@@ -62,10 +159,10 @@ a
       |
       |
 =========
-Missed letters:
-_ a _
-Guess a letter.
-o
+Letras perdidas:
+_ a _ _
+Adivinhe uma letra:
+x
 
   +---+
   |   |
@@ -75,9 +172,9 @@ o
       |
 =========
 
-Missed letters: o
-_ a _
-Guess a letter.
+Letras perdidas: x
+_ a _ _
+Adivinhe uma letra:
 r
 
   +---+
@@ -88,9 +185,9 @@ r
       |
 =========
 
-Missed letters: or
-_ a _
-Guess a letter.
+Letras perdidas: xr
+_ a _ _
+Adivinhe uma letra:
 t
 
   +---+
@@ -100,19 +197,52 @@ t
       |
       |
 =========
-Missed letters: or
-_ a t
-Guess a letter.
-a
-You have already guessed that letter. Choose again.
-Guess a letter.
-c
-Yes! The secret word is "cat"! You have won!
-Do you want to play again? (yes or no)
-no
-ASCII Art
-The graphics for hangman are all made out of keyboard characters printed on the screen. This type of graphics is called ASCII art (pronounced "ask-ee"), because keyboard characters (such as letters, numbers, and also all the other signs on the keyboard) are called ASCII characters. ASCII stands for American Standard Code for Information Interchange (we'll learn more about it in the Caesar Cipher chapter). Here are a couple cats done in ASCII art:
 
+Letras perdidas: xr
+_ a t _
+Adivinhe uma letra:
+a
+Você já adivinhou essa letra. Escolha novamente.
+Adivinhe uma letra:
+g
+
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+
+Letras perdidas: xr
+g a t _
+Adivinhe uma letra:
+o
+
+Isso! A palavra secreta é "gato"! Você venceu!
+Você deseja jogar novamente? (sim ou não)
+não
+```
+
+
+%ASCII Art
+=ASCIIART=
+
+%The graphics for hangman are all made out of keyboard characters printed on
+%the screen. This type of graphics is called ASCII art (pronounced "ask-ee"),
+%because keyboard characters (such as letters, numbers, and also all the other
+%signs on the keyboard) are called ASCII characters. ASCII stands for American
+%Standard Code for Information Interchange (we'll learn more about it in the
+%Caesar Cipher chapter). Here are a couple cats done in ASCII art:
+Os gráficos para o Jogo da Forca foram todos compostos por caracteres do
+teclado impressos na tela. Esse tipo de gráfico é chamado de ASCIIART
+(pronunciado "asqui"), porque os caracteres do teclado (tais como letras,
+números, e todos os outros símbolos no teclado) são chamados de caracteres
+ASCII. ASCII significa //American Standard Code for Information Interchange//
+(nós iremos aprender mais sobre ele no capítulo sobre a Cifra de Caesar).
+Abaixo, temos alguns gatos feitos com ASCIIART:
+
+```
                                      __________________
                                _____/   xx      xxx    \_____
                              _/xxx       xx      xxx   xxx   \__
@@ -136,7 +266,10 @@ The graphics for hangman are all made out of keyboard characters printed on the 
                       \____                                 _______/
                            \_______________________________/
 
-Designing a Program with a Flowchart
+```
+
+
+%Designing a Program with a Flowchart
 
 This game is a bit more complicated than the ones we've seen so far, so let's take a moment to think about how it's put together. First we'll create a flow chart (like the one at the end of the Dragon Realm chapter) to help us visualize what this program will do. This chapter will go over what flow charts are and why they are useful. The next chapter will go over the source code to the Hangman game. A flow chart is a diagram that shows a series of steps as a number of boxes connected with arrows. Each box represents a step, and the arrows show how one step leads to other steps. You can trace through the flow chart by putting your finger on the "Start" box of the flow chart and following the arrows to other boxes until you get to the "End" box. You can only move from one box to another in the direction of the arrow. You can never go backwards (unless there is a second arrow going back, like in the "Player already guessed this letter" box below.) Here is the complete flow chart for the Hangman game (Figure 8-1).
 
