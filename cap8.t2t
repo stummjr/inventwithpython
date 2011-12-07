@@ -270,15 +270,68 @@ Abaixo, temos alguns gatos feitos com ASCIIART:
 
 
 %Designing a Program with a Flowchart
+=Projetando um Programa com Fluxogramas=
 
-This game is a bit more complicated than the ones we've seen so far, so let's take a moment to think about how it's put together. First we'll create a flow chart (like the one at the end of the Dragon Realm chapter) to help us visualize what this program will do. This chapter will go over what flow charts are and why they are useful. The next chapter will go over the source code to the Hangman game. A flow chart is a diagram that shows a series of steps as a number of boxes connected with arrows. Each box represents a step, and the arrows show how one step leads to other steps. You can trace through the flow chart by putting your finger on the "Start" box of the flow chart and following the arrows to other boxes until you get to the "End" box. You can only move from one box to another in the direction of the arrow. You can never go backwards (unless there is a second arrow going back, like in the "Player already guessed this letter" box below.) Here is the complete flow chart for the Hangman game (Figure 8-1).
+%This game is a bit more complicated than the ones we've seen so far, so let's
+%take a moment to think about how it's put together. First we'll create a flow
+%chart (like the one at the end of the Dragon Realm chapter) to help us
+%visualize what this program will do. This chapter will go over what flow
+%charts are and why they are useful. The next chapter will go over the source
+%code to the Hangman game. A flow chart is a diagram that shows a series of
+%steps as a number of boxes connected with arrows. Each box represents a step,
+%and the arrows show how one step leads to other steps. You can trace through
+%the flow chart by putting your finger on the "Start" box of the flow chart and
+%following the arrows to other boxes until you get to the "End" box. You can
+%only move from one box to another in the direction of the arrow. You can never
+%go backwards (unless there is a second arrow going back, like in the "Player
+%already guessed this letter" box below.) Here is the complete flow chart for
+%the Hangman game (Figure 8-1).
+Este jogo é um pouco mais complicado do que aqueles que vimos até agora, então
+vamos parar um pouco para pensar em como juntar tudo isso. Primeiramente,
+iremos criar um fluxograma (como aquele feito ao final do capítulo do Reino do
+Dragão) para nos ajudar a visualizar o que o programa irá fazer. Este capítulo
+irá mostrar o que são fluxogramas e porque eles são úteis. O próximo capítulo
+irá apresentar o código-fonte para o Jogo da Forca. Um fluxograma é um diagrama
+que mostra uma série de passos como um conjunto de "caixa" conectadas por
+setas. Cada caixa representa um passo, e as setas mostram como um passo leva a
+outros passos. Você pode seguir pelo fluxograma colocando o seu dedo na caixa
+"Início" do fluxograma e seguindo as setas para outras caixas até você chegar à
+caixa "Fim". Você só pode passar de uma caixa para a outra na direção da seta.
+Você nunca pode andar para trás (a menos que haja uma segunda seta levando para
+trás, como na caixa "O jogador já escolheu essa letra" abaixo.) Aqui está um
+fluxograma completo para o Jogo da Forca (Figura 8-1).
+
+[chapter8/8-1.png]
+%Figure 8-1: The complete flow chart for what happens in the Hangman game.
+Figura 8-1: O fluxograma completo para o que acontece no Jogo da Forca.
+
+%Of course, we don't have to make a flow chart. We could just start writing
+%code. But often, once we start programming, we will think of things that need
+%to be added or changed that we hadn't considered before. We may end up having
+%to change or delete a lot of code that we had already written, which would be a
+%waste of effort. To avoid this, it's always best to think carefully, and plan
+%how the program will work before we start writing it.
+É claro que nós não precisamos fazer o fluxograma. Poderíamos começar já
+escrevendo código. Porém, frequentemente, quando iniciamos a programar, nós
+iremos lembrar de coisas que precisam ser adicionadas ou modificadas, que não
+haviam sido consideradas antes. Podemos acabar tendo que modificar ou apagar um
+monte de código que escrevemos, o que seria um desperdício de esforço. Para
+evitar isso, é sempre melhor pensar cuidadosamente, e planejar como o programa
+irá funcionar antes de começar a escrevê-lo.
+
+%The following flow chart is provided as an example of what flow charts look
+%like and how to make them. For now, since you're just using the source code
+%from this book, you don't need to draw a flow chart before writing code. The
+%program is already written, so you don't have to plan anything out. But when
+%you make your own games, a flow chart can be very handy.
+O fluxograma a seguir é fornecido como um exemplo de como os fluxogramas se
+parecem e como fazê-los. Por enquanto, como você está apenas utilizando o
+código-fonte deste livro, você não precisa desenhar um fluxograma antes de
+escrever código. O programa já está previamente escrito, assim você não precisa
+planejar nada. Mas, quando você escrever seus próprios jogos, um fluxograma será
+muito útil.
 
 
-Figure 8-1: The complete flow chart for what happens in the Hangman game.
-
-Of course, we don't have to make a flow chart. We could just start writing code. But often, once we start programming, we will think of things that need to be added or changed that we hadn't considered before. We may end up having to change or delete a lot of code that we had already written, which would be a waste of effort. To avoid this, it's always best to think carefully, and plan how the program will work before we start writing it.
-
-The following flow chart is provided as an example of what flow charts look like and how to make them. For now, since you're just using the source code from this book, you don't need to draw a flow chart before writing code. The program is already written, so you don't have to plan anything out. But when you make your own games, a flow chart can be very handy.
 Creating the Flow Chart
 
 Keep in mind, your flow charts don't always have to look exactly like this one. As long as you understand the flow chart you made, it will be helpful when you start coding. We'll begin with a flow chart that only has a "Start" and an "End" box, as shown in Figure 8-2:
