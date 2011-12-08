@@ -211,7 +211,7 @@ irá seguir para determinar exatamente como o programa deverá se comportar.
 Python 3, não Python 2.6 (ou qualquer outra versão 2.x). Certifique-se de que
 você possui a versão correta do Python instalada. (Se você já possui Python 2
 instalado, você pode ter Python 3 instalado concomitantemente.) Para baixar o
-Python 3, vá até 
+Python 3, vá até
 [python.org/download/releases/3.1.1/ python.org/download/releases/3.1.1/]
 e instale essa versão.
 
@@ -233,8 +233,8 @@ e instale essa versão.
 
 %The IDLE program will give different types of instructions different colors.
 %After you are done typing this code in, the window should look like this:
-O IDLE dá diferentes cores aos diferentes tipos de instruções. Depois que você
-terminar de digitar esse código, a janela deverá se parecer com o seguinte:
+O IDLE irá dar diferentes cores aos diferentes tipos de instruções. Depois que
+você terminar de digitar esse código, a janela deverá se parecer com o seguinte:
 
 [chapter3/3-3.png]
 
@@ -257,10 +257,10 @@ Figura 3-4: Salvando o programa.
 %File Editor window, and then click on Save As. The Save As window should open.
 %Enter hello.py in the File Name box then press Save. (See Figure 3-4.)
 Após ter digitado seu código-fonte, salve-o, de forma que você não precise
-reescrever ele a cada vez que inicia o IDLE. Para isso, escolha o menu "Arquivo"
-no topo da janela do Editor de Arquivos, e então clique em "Salvar Como". A
-janela Salvar Como deverá ser aberta. Digite alo.py na caixa "Nome do Arquivo" e
-clique em "Salvar". (Veja a Figura 3-4.)
+reescrever ele a cada vez que iniciamos o IDLE. Para isso, escolha o menu
+"Arquivo" no topo da janela do Editor de Arquivos, e então clique em "Salvar
+Como". A janela Salvar Como deverá ser aberta. Digite ``alo.py`` na caixa "Nome
+do Arquivo" e clique em "Salvar". (Veja a Figura 3-4.)
 
 %You should save your programs every once in a while as you type them. That way,
 %if the computer crashes or you accidentally exit from IDLE, only the typing
@@ -275,7 +275,7 @@ mouse.
 %A video tutorial of how to use the file editor is available from this book's
 %website at http://inventwithpython.com/videos/.
 Um tutorial, em vídeo, sobre como usar o editor de arquivos está disponível no
-website deste livro em: 
+website deste livro em:
 [http://inventwithpython.com/videos/ http://inventwithpython.com/videos/].
 
 %If you get an error that looks like this:
