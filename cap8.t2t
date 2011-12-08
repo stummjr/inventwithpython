@@ -7,13 +7,20 @@ Fluxogramas
 
 
 
+%TODO: durante todo o texto, o autor fala em player e ao se referir, usa they ou
+%them. Para não soar estranho, traduzi "they" como "ele". Trecho:
+
+% Then the second player tries to guess letters that might be in the word. If 
+% they guess correctly, the first player writes the letter in the proper blank.
+
+
 %Topics Covered In This Chapter:
-=Tópicos Cobertos Neste Capítulo:=
+==Tópicos Cobertos Neste Capítulo:==
 
 %    How to play Hangman.
 %    ASCII art
 %    Designing our game by drawing a flow chart before programming.
-- Como jogar Forca.
+- Como jogar o Jogo da Forca.
 - ASCIIART
 - Projetando nosso jogo através de fluxogramas antes de programar.
 
@@ -27,7 +34,7 @@ Neste capítulo, iremos projetar o Jogo da Forca. Esse jogo é mais complicado q
 nosso primeiro jogo, mas é também muito mais divertido. Como esse é um jogo
 avançado, nós devemos primeiramente planejá-lo criando um diagrama chamado
 fluxograma (a ser explicado mais tarde). No próximo capítulo, iremos escrever
-realmente o código do Jogo da Forca.
+de verdade o código do Jogo da Forca.
 
 
 %In case you've never played Hangman before, let's first learn the rules for
@@ -54,8 +61,8 @@ desenha um espaço em branco na página para cada letra da palavra. Então, o
 segundo jogador tenta adivinhar as letras que podem compor a palavra. Se ele
 errar, o primeiro jogador desenha uma única parte do corpo do homem da forca.
 Se o segundo jogador conseguir adivinhar todas as letras na palavra antes que o
-homem da forca tenha sido completamente desenhado, eles ganham. Mas se eles não
-conseguirem descobrir a tempo, o homem é enforcado e eles perdem o jogo.
+//homem da forca// tenha sido completamente desenhado, ele ganha. Mas se ele
+não conseguir descobrir a tempo, o homem é enforcado e ele perde o jogo.
 
 
 %Sample Run of "Hangman"
@@ -63,7 +70,7 @@ conseguirem descobrir a tempo, o homem é enforcado e eles perdem o jogo.
 
 %Here is an example of what the player might see when they run the Hangman
 %program we will write later. The text that the player enters in shown in bold.
-Aqui temos um exemplo de o que o jogador deve ver quanto executa o programa do
+Aqui temos um exemplo de o que o jogador deve ver quando executa o programa do
 Jogo da Forca que iremos escrever mais tarde. O texto que o usuário digita
 aparece em negrito.
 
@@ -150,8 +157,11 @@ JOGO DA FORCA
 Letras perdidas:
 _ _ _ _
 Adivinhe uma letra:
-a
+```
 
+**a**
+
+```
   +---+
   |   |
       |
@@ -162,8 +172,11 @@ a
 Letras perdidas:
 _ a _ _
 Adivinhe uma letra:
-x
+```
 
+**x**
+
+```
   +---+
   |   |
   O   |
@@ -175,8 +188,11 @@ x
 Letras perdidas: x
 _ a _ _
 Adivinhe uma letra:
-r
+```
 
+**r**
+
+```
   +---+
   |   |
   O   |
@@ -188,8 +204,11 @@ r
 Letras perdidas: xr
 _ a _ _
 Adivinhe uma letra:
-t
+```
 
+**t**
+
+```
   +---+
   |   |
   O   |
@@ -201,11 +220,18 @@ t
 Letras perdidas: xr
 _ a t _
 Adivinhe uma letra:
-a
+```
+
+**a**
+
+```
 Você já adivinhou essa letra. Escolha novamente.
 Adivinhe uma letra:
-g
+```
 
+**g**
+
+```
   +---+
   |   |
   O   |
@@ -217,12 +243,17 @@ g
 Letras perdidas: xr
 g a t _
 Adivinhe uma letra:
-o
+```
 
+**o**
+
+```
 Isso! A palavra secreta é "gato"! Você venceu!
 Você deseja jogar novamente? (sim ou não)
-não
 ```
+
+**não**
+
 
 
 %ASCII Art
@@ -292,16 +323,17 @@ iremos criar um fluxograma (como aquele feito ao final do capítulo do Reino do
 Dragão) para nos ajudar a visualizar o que o programa irá fazer. Este capítulo
 irá mostrar o que são fluxogramas e porque eles são úteis. O próximo capítulo
 irá apresentar o código-fonte para o Jogo da Forca. Um fluxograma é um diagrama
-que mostra uma série de passos como um conjunto de "caixa" conectadas por
+que mostra uma série de passos como um conjunto de "caixas" conectadas por
 setas. Cada caixa representa um passo, e as setas mostram como um passo leva a
 outros passos. Você pode seguir pelo fluxograma colocando o seu dedo na caixa
 "Início" do fluxograma e seguindo as setas para outras caixas até você chegar à
 caixa "Fim". Você só pode passar de uma caixa para a outra na direção da seta.
 Você nunca pode andar para trás (a menos que haja uma segunda seta levando para
-trás, como na caixa "O jogador já escolheu essa letra" abaixo.) Aqui está um
+trás, como na caixa "Jogador já adivinhou essa letra" abaixo.) Aqui está um
 fluxograma completo para o Jogo da Forca (Figura 8-1).
 
 [chapter8/8-1.png]
+
 %Figure 8-1: The complete flow chart for what happens in the Hangman game.
 Figura 8-1: O fluxograma completo para o que acontece no Jogo da Forca.
 
@@ -345,6 +377,7 @@ você começar a codificar. Nós iremos iniciar com um fluxograma que tem soment
 uma caixa "Início" e uma caixa "Fim", como mostra a Figura 8-2:
 
 [chapter8/8-2.png]
+
 %Figure 8-2: Begin your flow chart with a Start and End box.
 Figura 8-2: Comece seu fluxograma com uma caixa Início e uma caixa Fim.
 
@@ -365,13 +398,14 @@ primeiro o programa deveria trazer uma palavra secreta, e depois deveria pedir
 ao usuário para adivinhar uma letra.
 
 [chapter8/8-3.png]
+
 %Figure 8-3: Draw out the first two steps of Hangman as boxes with descriptions.
 Figura 8-3: Desenho dos dois primeiros passos do Jogo da Forca como caixas com
 descrições.
 
 %But the game doesn't end after the player guesses one letter. It needs to check
 %to see if that letter is in the secret word or not.
-Mas o jogo não termina epois que o jogador adivinha uma letra. Ele precisa
+Mas o jogo não termina depois que o jogador adivinha uma letra. Ele precisa
 verificar se aquela letra está ou não contida na palavra secreta.
 
 
@@ -389,6 +423,8 @@ jogador para adivinhar uma letra", nós somente podemos nos mover para a caixa
 "Letra pertence à palavra secreta" ou para a caixa "Letra não pertence à palavra
 secreta". Isto irá criar uma ramificação (isto é, uma divisão) no fluxograma,
 como mostra a Figura 8-4:
+
+[chapter8/8-4.png]
 
 %Figure 8-4: There are two different things that could happen after the player 
 %guesses, so have two arrows going to separate boxes.
@@ -412,10 +448,12 @@ homem que está sendo enforcado.
 %now looks like Figure 8-5.
 Nós podemos adicionar caixas para aqueles casos também. Nós não precisamos de
 uma seta da caixa "Letra pertence à palavra secreta" para a caixa "Jogador
-ficou sem partes do corpo para colocar e perdeu", porque é impossível perder
+esgotou as partes do corpo para colocar e perdeu", porque é impossível perder
 enquanto você está escolhendo letras corretas. Também, é impossível vencer
 quando você está escolhendo somente letras incorretas. Assim nós não precisamos
 desenhar aquela seta também. Nosso fluxograma agora se parece com a Figura 8-5.
+
+[chapter8/8-5.png]
 
 %Figure 8-5: After the branch, the steps continue on their separate paths.
 Figura 8-5: Despois da ramificação, os passos continuam em seus caminhos
@@ -433,6 +471,8 @@ Uma vez que o jogador venceu ou perdeu, nós iremos perguntá-lo se ele deseja
 jogar novamente com uma nova palavra secreta. Se ele não deseja jogar novamente,
 o programa irá terminar. Se o programa não terminar, nós pensamos em uma nova
 palavra secreta, como mostrado na Figura 8-6:
+
+[chapter8/8-6.png]
 
 %Figure 8-6: The game ends if the player doesn't want to play again, or the game
 %goes back to the beginning.
@@ -452,6 +492,8 @@ adivinhando letras até que ganhe ou perca o jogo. Nós precisamos desenhar duas
 novas setas de forma que o fluxograma represente isso, como mostrado na Figura
 8-7:
 
+[chapter8/8-7.png]
+
 %Figure 8-7: The game does not always end after a guess. The new arrows
 %(outlined) show that the player can guess again.
 Figura 8-7: O jogo não termina sempre após uma adivinhação. As novas setas
@@ -464,6 +506,8 @@ Nós estamos esquecendo algo mais. E se o jogador adivinha uma letra que já
 acertou anteriormente? Ao invés de fazê-lo vencer ou perder, nós iremos permitir
 que ele adivinhe uma letra diferente, como mostrado na Figura 8-8.
 
+[chapter8/8-8.png]
+
 %Figure 8-8: Adding a step in case the player guesses a letter they already
 %guessed.
 Figura 8-8: Adicionando um passo caso o jogador adivinhar uma letra que já
@@ -473,7 +517,7 @@ adivinhou.
 %Offering Feedback to the Player
 =Dando Resposta ao Jogador=
 
-%TODO: autor fala em jogador e se refere como they, them. Definir padrão.
+
 %We also need some way to show the player how they're doing. In order to do
 %this, we'll show them the hangman board, as well as the secret word (with
 %blanks for the letters they haven't guessed yet). These visuals will let them
@@ -491,16 +535,18 @@ perder ele está.
 %show the player an updated hangman board so they can see which letters they
 %have guessed correctly and which letters are not in the secret word.
 Nós precisaremos atualizar essa informação a cada vez que o jogador adivinhar
-uma letra. Nós podemos adicionar uma caixa "Mostra o tabuleiro e espaços em
-branco com o jogador." entre as caixas "Escolha uma palavra secreta" e "Peça ao
+uma letra. Nós podemos adicionar uma caixa "Mostre o tabuleiro e espaços em
+branco ao usuário." entre as caixas "Escolha uma palavra secreta" e "Peça ao
 jogador para adivinhar uma letra", como mostrado na Figura 8-9. Essa caixa irá
 nos lembrar de que nós precisamos mostrar ao jogador um tabuleiro do Jogo da
 Forca atualizado, de forma que ele possa ver quais letras ele adivinhou
 corretamente e quais letras não estão na palavra secreta.
 
+[chapter8/8-9.png]
+
 %Figure 8-9: Adding "Show the board and blanks to the player." to give the
 %player feedback.
-Figura 8-9: Adicionando a caixa "Mostra o tabuleiro e espaços em branco ao
+Figura 8-9: Adicionando a caixa "Mostre o tabuleiro e espaços em branco ao
 jogador." para dar uma resposta ao jogador.
 
 %That looks good! This flow chart completely maps out everything that can
