@@ -45,27 +45,52 @@ em qual direção. Mas, posicionando múltiplos sonares, o jogador pode descobri
 onde exatatmente o baú do tesouro está.
 
 
-There are three chests to collect, but the player has only sixteen sonar
-devices to use to find them. Imagine that we could not see the treasure chest
-in the following picture. Because each sonar device can only find the distance
-but not direction, the possible places the treasure could be is anywhere in a
-ring around the sonar device (see Figure 13-1).
+%There are three chests to collect, but the player has only sixteen sonar
+%devices to use to find them. Imagine that we could not see the treasure chest
+%in the following picture. Because each sonar device can only find the distance
+%but not direction, the possible places the treasure could be is anywhere in a
+%ring around the sonar device (see Figure 13-1).
+Existem três baús para coletar, mas o jogador possui somente 16 sonares para
+utilizar para encontrá-los. Imagine que nós não poderíamos ver o baú do tesouro
+na figura a seguir. Como cada sonar pode somente encontrar a distância mas não
+a direção, os possíveis locais onde o tesouro poderia ser encontrado é em
+qualquer círculo ao redor do sonar (veja Figura 13-1).
 
 
-Figure 13-1: The first sonar device shows a ring of possible places the
-treasure could be located.
+%Figure 13-1: The first sonar device shows a ring of possible places the
+%treasure could be located.
+Figura 13-1: O primeiro sonar mostra um círculo com os possíveis locais em
+que o tesouro poderia estar localizado.
 
 
-Figure 13-2: Combining the rings of all three sonar devices shows only one
-possible place for the treasure.
+%Figure 13-2: Combining the rings of all three sonar devices shows only one
+%possible place for the treasure.
+Figura 13-2: Combinando os círculos de três sonares nos mostra somente um
+possível local para o tesouro.
 
-But if we have multiple sonar devices working together, we can narrow it down
-to an exact place where all the rings intersect each other. (See Figure 13-2)
-Sample Run
+
+%But if we have multiple sonar devices working together, we can narrow it down
+%to an exact place where all the rings intersect each other. (See Figure 13-2)
+Mas, se nós temos múltiplos sonares trabalhando juntos, nós podemos reduzir a
+localização para um local exato onde todos os círculos fazem intersecção uns
+com os outros. (Veja Figura 13-2)
+
+
+
+%Sample Run
+=Exemplo de Execução=
+
+
+%S O N A R !
 S O N A R !
 
-Would you like to view the instructions? (yes/no)
-no
+
+%Would you like to view the instructions? (yes/no)
+%no
+Você gostaria de ver as instruções? (sim/não)
+
+não
+```
              1         2         3         4         5
    012345678901234567890123456789012345678901234567890123456789
 
@@ -87,9 +112,20 @@ no
 
    012345678901234567890123456789012345678901234567890123456789
              1         2         3         4         5
-You have 16 sonar devices left. 3 treasure chests remaining.
-Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+```
+
+
+%You have 16 sonar devices left. 3 treasure chests remaining.
+%Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+%10 10
+Você possui 16 sonares restantes. 3 baús de tesouro ainda restam.
+
+Onde você deseja soltar o próximo sonar? (0-59 0-14) (ou digite ``fechar``)
+
 10 10
+
+
+```
              1         2         3         4         5
    012345678901234567890123456789012345678901234567890123456789
 
@@ -111,10 +147,21 @@ Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
 
    012345678901234567890123456789012345678901234567890123456789
              1         2         3         4         5
-Treasure detected at a distance of 5 from the sonar device.
-You have 15 sonar devices left. 3 treasure chests remaining.
-Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+```
+
+%Treasure detected at a distance of 5 from the sonar device.
+%You have 15 sonar devices left. 3 treasure chests remaining.
+%Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+%15 6
+Tesouro detectado a uma distância de 5 do sonar.
+
+Você possui 15 sonares restantes. 3 baús de tesouro ainda restam.
+
+Onde você deseja soltar o próximo sonar? (0-59 0-14) (ou digite ``fechar``)
+
 15 6
+
+```
              1         2         3         4         5
    012345678901234567890123456789012345678901234567890123456789
 
@@ -136,10 +183,21 @@ Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
 
    012345678901234567890123456789012345678901234567890123456789
              1         2         3         4         5
-Treasure detected at a distance of 4 from the sonar device.
-You have 14 sonar devices left. 3 treasure chests remaining.
-Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+```
+%Treasure detected at a distance of 4 from the sonar device.
+%You have 14 sonar devices left. 3 treasure chests remaining.
+%Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+%15 10
+
+Tesouro detectado a uma distância de 4 do sonar.
+
+Você possui 14 sonares restantes. 3 baús de tesouro ainda restam.
+
+Onde você deseja soltar o próximo sonar? (0-59 0-14) (ou digite ``fechar``)
 15 10
+
+
+```
              1         2         3         4         5
    012345678901234567890123456789012345678901234567890123456789
 
@@ -161,14 +219,23 @@ Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
 
    012345678901234567890123456789012345678901234567890123456789
              1         2         3         4         5
-You have found a sunken treasure chest!
-You have 13 sonar devices left. 2 treasure chests remaining.
-Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+```
+
+%You have found a sunken treasure chest!
+%You have 13 sonar devices left. 2 treasure chests remaining.
+%Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
+
+Você encontrou um baú de tesouro afundado!
+
+Você possui 13 sonares restantes. 2 baús de tesouro ainda restam.
+
+Onde você deseja soltar o próximo sonar? (0-59 0-14) (ou digite ``fechar``)
 
 
-...skipped over for brevity....
+%...skipped over for brevity....
+...pulado para ser mais breve...
 
-
+```
              1         2         3         4         5
    012345678901234567890123456789012345678901234567890123456789
 
@@ -190,87 +257,119 @@ Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
 
    012345678901234567890123456789012345678901234567890123456789
              1         2         3         4         5
-Treasure detected at a distance of 4 from the sonar device.
-We've run out of sonar devices! Now we have to turn the ship around and head
-for home with treasure chests still out there! Game over.
-    The remaining chests were here:
+```
+
+%Treasure detected at a distance of 4 from the sonar device.
+%We've run out of sonar devices! Now we have to turn the ship around and head
+%for home with treasure chests still out there! Game over.
+%    The remaining chests were here:
+%    0, 4
+
+Tesouro detectado a uma distância de 4 do sonar.
+
+Nós estamos sem mais sonares! Agora nós temos que mudar a direção do navio e
+seguir em direção à casa com baús de tesouros lá fora. Fim do jogo.
+
+Você possui 14 sonares restantes. 3 baús de tesouro ainda restam.
+    Os baús restantes estavam aqui:
     0, 4
-Do you want to play again? (yes or no)
-no
-Sonar's Source Code
 
-Knowing about Cartesian coordinates, number lines, negative numbers, and
-absolute values will help us out with our Sonar game. If you do not think you
-understand these concepts, go back to chapter 12. Below is the source code for
-the game. Type it into a new file, then save the file as sonar.py and run it by
-pressing the F5 key. You do not need to understand the code to type it in or
-play the game, the source code will be explained later.
 
-Also, you can download the source code from the book's website at the URL
-http://inventwithpython.com/chapter13.  sonar.py This code can be downloaded
-from http://inventwithpython.com/sonar.py If you get errors after typing this
-code in, compare it to the book's code with the online diff tool at
-http://inventwithpython.com/diff or email the author at al@inventwithpython.com
+%Sonar's Source Code
+=Código-fonte do Sonar=
 
+%Knowing about Cartesian coordinates, number lines, negative numbers, and
+%absolute values will help us out with our Sonar game. If you do not think you
+%understand these concepts, go back to chapter 12. Below is the source code for
+%the game. Type it into a new file, then save the file as sonar.py and run it by
+%pressing the F5 key. You do not need to understand the code to type it in or
+%play the game, the source code will be explained later.
+Conhecendo as coordenadas Cartesianas, número das linhas, números negativos, e
+valores abstolutos irá nos ajudar com nosso jogo do Sonar. Se você pensa que não
+entende esses conceitos, volte ao capítulo 12. Abaixo está o código-fonte para o
+jogo. Digite-o em um novo arquivo, então salve o arquivo como ``sonar.py`` e rode
+ele pressionando a tecla F5. Você não precisa entender o código para digitá-lo ou
+jogar o jogo, o código-fonte será explicado depois.
+
+%Also, you can download the source code from the book's website at the URL
+%http://inventwithpython.com/chapter13.
+Você pode baixar o código-fonte diretamente do website do livro pela URL
+http://inventwithpython.com/chapter13
+
+%sonar.py This code can be downloaded
+%from http://inventwithpython.com/sonar.py If you get errors after typing this
+%code in, compare it to the book's code with the online diff tool at
+%http://inventwithpython.com/diff or email the author at al@inventwithpython.com
+**sonar.py**
+
+Este código pode ser baixado de http://inventwithpython.com/sonar.py
+
+Se você obtiver erros após digitar esse código, compare-o com o código do livro 
+através da ferramenta online para diff em http://inventwithpython.com/diff ou
+envie um //email// ao autor em al@inventwithpython.com
+
+
+```
     # Sonar
     import random
     import sys
     def drawBoard(board):
-        # Draw the board data structure.
+        # Desenha a estrutura de dados do tabuleiro
         hline = '    ' 
-        # initial space for the numbers down the left side of the board
+        # espaço inicial para os números do lado esquerdo do tabuleiro
         for i in range(1, 6):
             hline += (' ' * 9) + str(i)
-        # print the numbers across the top
+        # imprime os números no topo
         print(hline)
         print('   ' + ('0123456789' * 6))
         print()
-        # print each of the 15 rows
+        # imprime cada uma das 15 linhas
         for i in range(15):
-            # single-digit numbers need to be padded with an extra space
+            # números de um dígito devem ser preenchidos com espaços-extra
             if i < 10:
                 extraSpace = ' '
             else:
                 extraSpace = ''
             print('%s%s %s %s' % (extraSpace, i, getRow(board, i), i))
-        # print the numbers across the bottom
+        # imprime os números na base
         print()
         print('   ' + ('0123456789' * 6))
         print(hline)
     def getRow(board, row):
-        # Return a string from the board data structure at a certain row.
+        # Retorna uma string da estrutura de dados tabuleiro em uma certa linha
         boardRow = ''
         for i in range(60):
             boardRow += board[i][row]
         return boardRow
     def getNewBoard():
-        # Create a new 60x15 board data structure.
+        # Cria uma nova estrutura de dados tabuleiro de 60x15
         board = []
-        for x in range(60): # the main list is a list of 60 lists
+        for x in range(60): # a lista principal é uma lista de 60 listas
             board.append([])
             for y in range(15):
-            # each list in the main list has 15 single-character strings
-            # use different characters for the ocean to make it more readable.
+            # cada lista na lista principal contém 15 strings de um caractere
+            # utiliza diferentes caracteres para o oceano para fazê-lo mais legível
                 if random.randint(0, 1) == 0:
                     board[x].append('~')
                 else:
                     board[x].append('`')
         return board
     def getRandomChests(numChests):
-        # Create a list of chest data structures 
-        #  (two-item lists of x, y int coordinates)
+        # Cria uma lista de estruturas de dados baú
+        #  (listas de dois items x, y que são coordenadas inteiras)
         chests = []
         for i in range(numChests):
             chests.append([random.randint(0, 59), random.randint(0, 14)])
         return chests
     def isValidMove(x, y):
-        # Return True if the coordinates are on the board, otherwise False.
+        # Retorna True se as coordenadas pertencem ao tabuleiro, caso contrário
+        # retorna False
         return x >= 0 and x <= 59 and y >= 0 and y <= 14
     def makeMove(board, chests, x, y):
-        # Change the board data structure with a sonar device character. 
-        # Remove treasure chests from the chests list as they are found. 
-        # Return False if this is an invalid move.
-        # Otherwise, return the string of the result of this move.
+        # Modifica a estrutura de dados tabuleiro com um caractere de sonar.
+        # Remove baús de tesouro da lista de baús a medida que forem encontrados.
+        # Retorna False se é um movimento inválido.
+        # Caso contrário, retorna a string do resultado deste movimento.
         if not isValidMove(x, y):
             return False
         smallestDistance = 100 # any chest will be closer than 100.
@@ -280,10 +379,10 @@ http://inventwithpython.com/diff or email the author at al@inventwithpython.com
             else:
                 distance = abs(cy - y)
             if distance < smallestDistance: 
-            # we want the closest treasure chest.
+            # queremos o baú do tesouro mais próximo
                 smallestDistance = distance
         if smallestDistance == 0:
-            # xy is directly on a treasure chest!
+            # xy está diretamente no local de um baú do tesouro!
             chests.remove([x, y])
             return 'You have found a sunken treasure chest!'
         else:
@@ -294,7 +393,8 @@ http://inventwithpython.com/diff or email the author at al@inventwithpython.com
                 board[x][y] = 'O'
                 return 'Sonar did not detect anything. All treasure chests out of range.'
     def enterPlayerMove():
-        # Let the player type in her move. Return a two-item list of int xy coordinates.
+        # Permite ao jogador digitar seu movimento. Retorna uma lista de dois elementos
+        #  representando as coordenadas inteiras xy.
         print('Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)')
         while True:
             move = input()
@@ -306,7 +406,7 @@ http://inventwithpython.com/diff or email the author at al@inventwithpython.com
                 return [int(move[0]), int(move[1])]
             print('Enter a number from 0 to 59, a space, then a number from 0 to 14.')
     def playAgain():
-        # This function returns True if the player wants to play again, otherwise it returns False.
+        # Esta função retorna True se o jogador quer jogar novamente, caso contrário, retorna False.
         print('Do you want to play again? (yes or no)')
         return input().lower().startswith('y')
     def showInstructions():
@@ -370,13 +470,13 @@ http://inventwithpython.com/diff or email the author at al@inventwithpython.com
             else: extraSchest = ''
             print('You have %s sonar device%s left. %s treasure chest%s remaining.' % (sonarDevices, extraSsonar, len(theChests), extraSchest))
             x, y = enterPlayerMove()
-            previousMoves.append([x, y]) # we must track all moves so that sonar devices can be updated.
+            previousMoves.append([x, y]) # nós devemos manter histórico de todos movimentos de forma que os sonares possam ser atualizados
             moveResult = makeMove(theBoard, theChests, x, y)
             if moveResult == False:
                 continue
             else:
                 if moveResult == 'You have found a sunken treasure chest!':
-                    # update all the sonar devices currently on the map.
+                    # atualiza todos os sonares atualmente no mapa.
                     for x, y in previousMoves:
                         makeMove(theBoard, theChests, x, y)
                 drawBoard(theBoard)
@@ -393,39 +493,140 @@ http://inventwithpython.com/diff or email the author at al@inventwithpython.com
                 print('    %s, %s' % (x, y))
         if not playAgain():
             sys.exit()
+```
 
-Designing the Program
 
-Sonar is kind of complicated, so it might be better to type in the game's code and play it a few times first to understand what is going on. After you've played the game a few times, you can kind of get an idea of the sequence of events in this game.
+%Designing the Program
+=Projetando o Programa=
 
-The Sonar game uses lists of lists and other complicated variables. These complicated variables are known as data structures. Data structures will let us store arrangements of values in a single variable to represent something (such as the locations of the treasure chests in Sonar). We will use data structures for the locations of the treasure chests and dropped sonar devices. One example of a data structure was the board variable in the Tic Tac Toe chapter.
+%Sonar is kind of complicated, so it might be better to type in the game's code
+%and play it a few times first to understand what is going on. After you've
+%played the game a few times, you can kind of get an idea of the sequence of
+%events in this game.
+Sonar é um tanto quanto complicado, então pode ser melhor digitar o código do 
+jogo e jogá-lo algumas vezes antes para entender o que está acontecendo. Depois
+que você jogou o jogo algumas vezes, você pode ter uma idéia da sequência de
+eventos neste jogo.
 
-It is also helpful to write out the things we need our program to do, and come up with some function names that will handle these actions. Remember to name functions after what they specifically do. Otherwise we might end up forgetting a function, or typing in two different functions that do the same thing.
-Table 13-1: A list of each function the Sonar game needs. What the code should do.	The function that will do it.
-Prints the game board on the screen based on the board data structure it is passed, including the coordinates along the top, bottom, and left and right sides.	drawBoard()
-Create a fresh board data structure.	getNewBoard()
-Create a fresh chests data structure that has a number of chests randomly scattered across the game board.	getRandomChests()
-Check that the XY coordinates that are passed to this function are located on the game board or not.	isValidMove()
-Let the player type in the XY coordinates of his next move, and keep asking until they type in the coordinates correctly.	enterPlayerMove()
-Place a sonar device on the game board, and update the board data structure then return a string that describes what happened.	makeMove()
-Ask the player if they want to play another game of Sonar.	playAgain()
-Print out instructions for the game.	showInstructions()
 
-These might not be all of the functions we need, but a list like this is a good idea to help you get started with programming your own games. For example, when designing the drawBoard() function in the Sonar game, we find out we also need a function that does what getRow() does. Writing out a function once and then calling it twice is preferable to writing out the code twice. The whole point of functions is to reduce duplicate code down to one place, so if we ever need to make changes to that code we only need to change one place in our program.
-How the Code Works: Lines 1 to 38
+%The Sonar game uses lists of lists and other complicated variables. These
+%complicated variables are known as data structures. Data structures will let
+%us store arrangements of values in a single variable to represent something
+%(such as the locations of the treasure chests in Sonar). We will use data
+%structures for the locations of the treasure chests and dropped sonar devices.
+%One example of a data structure was the board variable in the Tic Tac Toe
+%chapter.
+O jogo Sonar utiliza listas de listas e outras variáveis complicadas. Estas
+variáveis complicadas são conhecidas como **estruturas de dados**. Estruturas
+de dados irão nos permitir armazenar conjuntos de valores em uma única variável
+para representar algo (como a localização dos baús de tesouro no jogo Sonar).
+Nós iremos utilizar estruturas de dados para as localizações dos baús de
+tesouro e de sonares instalados. Um exemplo de uma estrutura de dados foi
+a variável //board// no capítulo Tic Tac Toe.
 
+
+%It is also helpful to write out the things we need our program to do, and come
+%up with some function names that will handle these actions. Remember to name
+%functions after what they specifically do. Otherwise we might end up
+%forgetting a function, or typing in two different functions that do the same
+%thing.
+Outra coisa que nos ajuda é escrever as coisas que nosso programa deve fazer,
+criando os nomes de funções que irão manipular estas ações específicas.
+Lembre-se de nomear funções pelo que elas fazem. Do contrário, nós podemos
+acabar esquecendo uma função, ou escrevendo duas diferentes funções que fazem
+a mesma coisa.
+
+
+%Table 13-1: A list of each function the Sonar game needs.
+Tabela 13-1: Uma lista de cada função que o jogo Sonar precisa.
+
+%What the code should do. The function that will do it.
+%Prints the game board on the screen based on the board data structure it is passed, including the coordinates along the top, bottom, and left and right sides.	drawBoard()
+%Create a fresh board data structure.	getNewBoard()
+%Create a fresh chests data structure that has a number of chests randomly scattered across the game board.	getRandomChests()
+%Check that the XY coordinates that are passed to this function are located on the game board or not.	isValidMove()
+%Let the player type in the XY coordinates of his next move, and keep asking until they type in the coordinates correctly.	enterPlayerMove()
+%Place a sonar device on the game board, and update the board data structure then return a string that describes what happened.	makeMove()
+%Ask the player if they want to play another game of Sonar.	playAgain()
+%Print out instructions for the game.	showInstructions()
+|O que o código deve fazer.|A função que irá fazer isso.|
+|Imprime o tabuleiro na tela baseado nos dados da estrutura tabuleiro que é recebida, incluindo as coordenadas.|drawBoard()|
+|Cria uma nova estrutura de dados tabuleiro|getNewBoard()|
+|Cria uma nova estrutura ``chests`` que possui o número de baús aleatoriamente espalhados através do tabuleiro do jogo.|getRandomChests()|
+|Verifica se as coordenadas XY que são passadas para essa função estão localizadas no tabuleiro do jogo ou não.|isValidMove()|
+|Permite ao jogador digitar as coordenadas XY da sua próxima jogada, e permanece pedindo ao usuário até que este forneça as coordenadas corretamente.|entetrPlayerMove()|
+|Coloca um sonar no tabuleiro do jogo, atualiza a estrutura tabuleiro e então retorna uma string descrevendo o que aconteceu.|makeMove()|
+|Pergunta ao jogador se ele deseja jogar novamente o jogo Sonar.|playAgain()|
+|Imprime na tela as intruções para o jogo.|showInstructions()|
+
+
+%These might not be all of the functions we need, but a list like this is a
+%good idea to help you get started with programming your own games. For
+%example, when designing the drawBoard() function in the Sonar game, we find
+%out we also need a function that does what getRow() does. Writing out a
+%function once and then calling it twice is preferable to writing out the code
+%twice. The whole point of functions is to reduce duplicate code down to one
+%place, so if we ever need to make changes to that code we only need to change
+%one place in our program.
+Estas podem não ser todas as funções que precisamos, mas uma lista como essa
+é uma boa idéia para ajudar você a começar programando seus próprios jogos.
+Por eemplo, quando projetamos a função ``drawboard()`` no jogo Sonar, nós 
+descobrimos que também precisávamos de uma função que fizesse o que a função
+``getRow()`` faz. Escrevendo a função uma vez e chamando-a duas vezes é
+preferível a escrever o código duas vezes. O ponto principal das funções é
+reduzir o código duplicado para apenas um local, assim, se precisarmos alterar
+aquele código, nós precisaremos alterar apenas um lugar em nosso programa.
+
+
+
+%How the Code Works: Lines 1 to 38
+==Como o código funciona: Linhas 1 a 38==
+%    # Sonar
+%    import random
+%    import sys
+```
     # Sonar
     import random
     import sys
+```
 
-Here we import two modules, random and sys. The sys module contains the exit() function, which causes the program to immediately terminate. We will call this function later in our program.
-Drawing the Game Board
+%Here we import two modules, random and sys. The sys module contains the exit()
+%function, which causes the program to immediately terminate. We will call this
+%function later in our program.
+Aqui importamos dois módulos, ``random`` e ``sys``. O módulo ``sys`` contém a 
+função ``exit()``, que faz com que o programa termine imediatamente. Nós
+iremos chamar essa função mais tarde em nosso programa.
 
+
+%Drawing the Game Board
+===Desenhando o tabuleiro do jogo===
+
+%    def drawBoard(board):
+```
     def drawBoard(board):
+```
 
-The back tick (`) and tilde (~) characters are located next to the 1 key on your keyboard. They resemble the waves of the ocean. Somewhere in this ocean are three treasure chests, but you don't know where. You can figure it out by planting sonar devices, and tell the game program where by typing in the X and Y coordinates (which are printed on the four sides of the screen.)
+%The back tick (`) and tilde (~) characters are located next to the 1 key on
+%your keyboard. They resemble the waves of the ocean. Somewhere in this ocean
+%are three treasure chests, but you don't know where. You can figure it out by
+%planting sonar devices, and tell the game program where by typing in the X and
+%Y coordinates (which are printed on the four sides of the screen.)
+Os caracteres crase (\`) e til (~) estão localizados próximos à tecla Enter do
+seu teclado (depende, é claro, do tipo do seu teclado). Eles lembram as ondas
+em um oceano. Em algum lugar desse oceano, existem baús de tesouro, mas você
+não sabe onde. Você pode descobrir inserindo sonares, e informando ao programa
+onde está o baú, digitando as coordenadas X e Y (que são impressas nos quatro
+lados da tela.)
 
-The drawBoard() function is the first function we will define for our program. The sonar game's board is an ASCII-art ocean with coordinates going along the X- and Y-axis, and looks like this:
+
+%The drawBoard() function is the first function we will define for our program.
+%The sonar game's board is an ASCII-art ocean with coordinates going along the
+%X- and Y-axis, and looks like this:
+A função ``drawBoard()`` é a primeira função que iremos definir para o nosso
+programa. O tabuleiro do jogo Sonar é um oceano feito de arte com ASCII, com
+as coordenadas variando nos eixos X e Y, e se parece com o seguinte:
+
+```
              1         2         3         4         5
    012345678901234567890123456789012345678901234567890123456789
 
@@ -447,19 +648,50 @@ The drawBoard() function is the first function we will define for our program. T
 
    012345678901234567890123456789012345678901234567890123456789
              1         2         3         4         5
+```
 
-We will split up the drawing in the drawBoard() function into four steps. First, we create a string variable of the line with 1, 2, 3, 4, and 5 spaced out with wide gaps (to mark the coordinates for 10, 20, 30, 40, and 50). Second, we use that string to display the X-axis coordinates along the top of the screen. Third, we print each row of the ocean along with the Y-axis coordinates on both sides of the screen. And fourth, we print out the X-axis again at the bottom. Having the coordinates on all sides makes it easier for the player to move their finger along the spaces to see where exactly they want to plan a sonar device.
-Drawing the X-coordinates Along the Top
+%We will split up the drawing in the drawBoard() function into four steps.
+%First, we create a string variable of the line with 1, 2, 3, 4, and 5 spaced
+%out with wide gaps (to mark the coordinates for 10, 20, 30, 40, and 50).
+%Second, we use that string to display the X-axis coordinates along the top of
+%the screen. Third, we print each row of the ocean along with the Y-axis
+%coordinates on both sides of the screen. And fourth, we print out the X-axis
+%again at the bottom. Having the coordinates on all sides makes it easier for
+%the player to move their finger along the spaces to see where exactly they
+%want to plan a sonar device.
+Nós iremos dividir o desenho na função ``drawBoard()`` em quatro passos.
+Primeiramente, iremos criar uma variável do tipo string para representar a
+linha que contém 1, 2, 3, 4, e 5 seperados por grandes espaçamentos (para 
+marcar as coordenadas para 10, 20, 30, 40, e 50). Em segundo lugar, nós usamos
+tal string para mostrar as coordenadas do eixo X na tela. Em terceiro, nós
+imprimimos cada linha do oceano juntamente com as coordenadas do eixo Y em
+ambos os lados da tela. E em quarto lugar, nós imprimimos o eixo X novamente
+embaixo do tabuleiro. Ter as coordenadas em todos os lados torna mais fácil
+para o jogador mover seus dedos pelos espaços para ver onde exatamente ele
+quer plantar um sonar.
 
-        # Draw the board data structure.
-        hline = '    ' # initial space for the numbers down the left side of the board
+
+%Drawing the X-coordinates Along the Top
+===Desenhando as coordenadas X no topo===
+
+%        # Draw the board data structure.
+%        hline = '    ' # initial space for the numbers down the left side of the board
+%        for i in range(1, 6):
+%            hline += (' ' * 9) + str(i)
+        # Desenha a estrutura tabuleiro.
+        hline = '    ' # espaço inicial para os números do lado esquerdo do tabuleiro
         for i in range(1, 6):
             hline += (' ' * 9) + str(i)
 
-Let's look again at the top part of the board, this time with plus signs instead of blank spaces so we can count the spaces easier:
+%Let's look again at the top part of the board, this time with plus signs
+%instead of blank spaces so we can count the spaces easier:
+Vamos olhar novamente para a parte de cima do tabuleiro, desta vez com símbolos
+de soma (+) ao invés de espaços em branco de forma que possamos contar
+os espaços facilmente:
 
-
-Figure 13-3: The spacing we use for printing the top of the game board.
+%Figure 13-3: The spacing we use for printing the top of the game board.
+Figura 13-3: O espaçamento que usamos para imprimir o topo do tabuleiro do 
+jogo.
 
 The numbers on the first line which mark the tens position all have nine spaces in between them, and there are thirteen spaces in front of the 1. We are going to create a string with this line and store it in a variable named hline.
 
