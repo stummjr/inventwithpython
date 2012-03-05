@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.sf.net">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>Capítulo 5</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<CENTER>
+<H1>Capítulo 5</H1>
+<FONT SIZE="4"><I>Piadas</I></FONT><BR>
+</CENTER>
+
+
+<H2>Tópicos cobertos neste capítulo</H2>
+
+<UL>
+<LI>Usando o argumento <CODE>end</CODE> para o <CODE>print()</CODE> para pular quebras de linhas
+<LI>Escapar caracteres
+<LI>Usando aspas simples e aspas duplas para sequências de caracteres
+</UL>
+
+<H1>Tire o máximo de print()</H1>
+
+<P>
+A maioria dos jogos neste livro terão texto simples como entrada e saída.
+A entrada é digitada pelo usuário no teclado escrevendo no computador.
+A saída é o texto mostrada na tela.
+Em Python, a função <CODE>print()</CODE> pode ser usada para mostrar saída textual na
+tela.  Nós aprendemos o básico dessa função, mas há mais para aprender sobre
+como funcionam a <CODE>print()</CODE> e sequências de caracteres em Python.
+</P>
+
+<H2>Rodando o programa Piadas</H2>
+
+<PRE>
+  Qual o resultado de cruzar um cachorro com um gato?
+  
+  Uma baita duma briga!
+  
+  Qual a diferença entre Brasília e uma caixa d'água?
+  
+  Na caixa d'água só tem um ladrão...
+  
+  Toque toque!
+  
+  Quem é?
+  
+  A vaca interrompida!
+  
+  Que vaca interromp-MUUUUU!!
+</PRE>
+
+<H2>Código fonte do Piadas</H2>
+
+<P>
+Aqui está o código-fonte do nosso pequeno programa Piadas.
+Se você não quer digitar todo esse código, você pode baixar o código-fonte na
+página deste livro aqui: <A HREF="chapter5/piadas.py">piadas.py</A>
+</P>
+<P>
+<B>NOTA IMPORTANTE!</B> O programa a seguir deve ser executado pelo intepretador
+Python 3, não Python 2.6 (ou qualquer outra versão 2.x). Certifique-se de que
+você possui a versão correta do Python instalada. (Se você já possui Python 2
+instalado, você pode ter Python 3 instalado concomitantemente.) Para baixar o
+Python 3, vá até 
+<A HREF="python.org/download/releases/3.1.1/">python.org/download/releases/3.1.1/</A>
+e instale essa versão.
+</P>
+
+<OL>
+<LI>print('Qual o resultado de cruzar um cachorro com um gato?')
+<LI>input()
+<LI>print('Uma baita duma briga!')
+<LI>print()
+<LI>print('Qual a diferença entre Brasília e uma caixa d\'água?')
+<LI>input()
+<LI>print('Na caixa d\'água só tem um ladrão...')
+<LI>print()
+<LI>print('Toque toque!')
+<LI>input()
+<LI>print('Quem é?')
+<LI>input()
+<LI>print('A vaca interrompida!')
+<LI>input()
+<LI>print('Que vaca interromp-', end='')
+<LI>print('MUUUUU!!')
+</OL>
+
+<P>
+Não se preocupe se você não entende tudo no programa. Apenas salve e rode o
+programa.
+</P>
+
+<H1>Como o código funciona</H1>
+
+<P>
+Vamos dar uma olhada no código mais de perto.
+</P>
+
+<OL>
+<LI>print('Qual o resultado de cruzar um cachorro com um gato?')
+<LI>input()
+<LI>print('Uma baita duma briga!')
+<LI>print()
+<P></P>
+Aqui nós temos três chamadas à função <CODE>print</CODE>.
+Como nós não queremos dizer ao jogador o final da piada, nós precisamos chamar a
+função <CODE>input()</CODE> depois do primeiro <CODE>print()</CODE>. O jogador pode ler a primeira
+linha, apertar Enter, e então ler o final da piada.
+<P></P>
+O usuário pode ainda digitar uma sequência de caracteres e apertar Enter, mas como nós não
+estamos armazenando essa sequência de caracteres em nenhuma variável, o programa simplesmente
+esquecerá ela e continuar para a próxima linha de código.
+<P></P>
+A última chamada à função <CODE>print()</CODE> não tem nenhum argumento. Isso faz com que
+o programa apenas mostre uma linha em branco. Linhas em branco podem ser úteis
+para não deixar nosso texto todo amontoado.
+</OL>
+
+<H2>Caracteres de escape</H2>
+
+<P>
+<OL start="5">
+<LI>print('Qual a diferença entre Brasília e uma caixa d\'água?')</LI>
+<LI>input()</LI>
+<LI>print('Na caixa d\'água só tem um ladrão...')</LI>
+<LI>print()</LI>
+</OL>
+</P>
+<P>
+No primeiro <CODE>print()</CODE> acima, você notará que temos uma barra logo antes da
+aspa simples (isto é, o apóstrofo). Esta barra invertida (\ é uma barra
+invertida - <I>backslash</I>, / barra é uma barra normal - <I>slash</I>) nos diz que a
+letra logo a seguir é um <CODE>caractere de escape</CODE>. Um caractere de escape nos
+ajuda a mostrar na tela letras que são difíceis de escrever no código-fonte.
+Existem vários caracteres de escape, mas na nossa chamada a <CODE>print()</CODE> o
+caractere de escape é a aspa simples.
+</P>
+<P>
+Nós precisamos ter o caractere de escape de aspas simples porque se não, o
+interpretador Python pensaria que esta aspa significa o fim da sequência de caracteres, mas nós
+queremos que esta aspa seja parte da sequência de caracteres. Quando mostramos essa sequência de caracteres, a
+barra invertida não aparecerá.
+</P>
+
+<H2>Alguns outros caracteres de escape</H2>
+
+<P>
+E se você quiser realmente mostrar uma barra invertida? Esta linha de código não
+funcionaria:
+</P>
+<P>
+<CODE>&gt;&gt;&gt; print('He flew away in a green\teal helicopter.')</CODE>
+</P>
+<P>
+A função <CODE>print()</CODE> mostraria:
+</P>
+<P>
+<CODE>He flew away in a green	eal helicopter.</CODE>
+</P>
+<P>
+Isto é porque o "t" em "teal" foi interpretado como um caractere de escape, já
+que veio depois de uma barra invertida. O caractere de escape <B>t</B> simula uma
+tecla TAB do seu teclado. Os caracteres de escape existem para que as sequências de caracteres
+possam ter caracteres que não podem ser digitados.
+</P>
+<P>
+Tente agora esta linha:
+</P>
+<P>
+<CODE>&gt;&gt;&gt; print('He flew away in a green\\teal helicopter.')</CODE>
+</P>
+<P>
+Aqui está uma lista de caracteres de escape em Python:
+</P>
+
+<TABLE BORDER="1" CELLPADDING="4">
+<TR>
+<TH>Caractere de Escape</TH>
+<TH>O que é realmente mostrado</TH>
+</TR>
+<TR>
+<TD>\\</TD>
+<TD>Backslash (\)</TD>
+</TR>
+<TR>
+<TD>\'</TD>
+<TD>Single quote (')</TD>
+</TR>
+<TR>
+<TD>\"</TD>
+<TD>Double quote (")</TD>
+</TR>
+<TR>
+<TD>\n</TD>
+<TD>Newline</TD>
+</TR>
+<TR>
+<TD>\t</TD>
+<TD>Tab</TD>
+</TR>
+</TABLE>
+
+<H1>Aspas Simples e Aspas Duplas</H1>
+
+<P>
+Em python, sequências de caracteres não precisam estar sempre entre aspas simples.
+Você também pode usar elas entre aspas duplas. Estas duas linhas mostram a mesma
+coisa:
+</P>
+
+<PRE>
+  &gt;&gt;&gt; print('Alô mundo')
+  Alô mundo
+  &gt;&gt;&gt; print("Alô mundo")
+  Alô mundo
+</PRE>
+
+<P>
+Mas você não pode misturar aspas. Esta linha dará erro se você tentar usá-la:
+</P>
+
+<PRE>
+  &gt;&gt;&gt; print('Alô mundo")
+  SyntaxError: EOL while scanning single-quoted string
+  &gt;&gt;&gt;
+</PRE>
+
+<P>
+Eu gosto de usar aspas simples porque não preciso ter que apertar a tecla shift
+no meu teclado para digitá-las. É mais fácil de digitar, e o computador não se
+importa de qualquer forma.
+</P>
+<P>
+Mas lembre-se, assim como você precisa usar o caractere de escape \' para usar
+uma aspa simples em uma sequência de caracteres envolta por aspas simples, você precisa do
+caractere de escape \" para ter uma aspa dupla em uma sequência de caracteres envolta por aspas
+duplas. Por exemplo, olhe para estas duas linhas:
+</P>
+
+<PRE>
+  &gt;&gt;&gt; print('Convidei minha amiga para ir ao Mcdonald\'s. Ela disse, "Pode apostar."')
+  Convidei minha amiga para ir ao Mcdonald's. Ela disse, "Pode apostar."
+  &gt;&gt;&gt; print("He said, \"I can't believe you let him borrow your car.\"")
+  He said, "I can't believe you let him borrow your car."
+</PRE>
+
+<P>
+Você notou que nas sequências de caracteres com aspas simples você não precisa "escapar" as aspas
+duplas, e nas sequências de caracteres com aspas duplas você não precisa escapar as aspas
+simples? O interpretador Python é esperto o suficiente para saber que se uma
+sequência de caracteres começa com uma aspa de um tipo, o outro tipo de aspa não significa que a
+sequência de caracteres está terminando.
+</P>
+
+<H1>O argumento chave end</H1>
+
+<P>
+<OL start="9">
+<LI>print('Toque toque!')</LI>
+<LI>input()</LI>
+<LI>print('Quem é?')</LI>
+<LI>input()</LI>
+<LI>print('A vaca interrompida!')</LI>
+<LI>input()</LI>
+<LI>print('Que vaca interromp-', end='')</LI>
+<LI>print('MUUUUU!!')</LI>
+</OL>
+</P>
+<P>
+Você notou que o segundo parâmetro no <CODE>print()</CODE> da linha 15? Normalmente,
+<CODE>print()</CODE> adiciona um caractere de quebra de linha no fim da sequência de caracteres que ele
+mostra. (É por isso que uma chamada a <CODE>print()</CODE> em branco irá apenas mostra
+uma quebra de linha.) Mas a função <CODE>print()</CODE> pode opcionalmente ter um segundo
+parâmetro (que tem o nome <CODE>end</CODE>.) A sequência de caracteres vazia que estamos passando é
+chamada um <CODE>argumento chave</CODE>. O parâmetro <CODE>end</CODE> tem um nome específico, e
+para passar um argumento para este parâmetro específico nós precisamos usar a
+sintaxe <CODE>end=</CODE>.
+</P>
+<P>
+Note que quando você digita a chave e o argumento chave, você usa apenas um
+sinal =. É <CODE>end=''</CODE>, e não <CODE>end==''</CODE>.
+</P>
+<P>
+Passando uma sequência de caracteres vazia para o <I>end</I>, nós dizemos à função <CODE>print()</CODE> não
+adicionar a quebra de linha no final da sequência de caracteres, e sim uma sequência de caracteres vazia. É por
+isso que <CODE>'MUUUUU!!'</CODE> aparece junto da linha anterior, em vez de numa nova
+linha. Não houve nenhuma quebra de linha a ser mostrada depois da sequência de caracteres
+<CODE>'Que vaca interromp-'</CODE>.
+</P>
+
+<H1>Resumo</H1>
+
+<P>
+Este capítulo explora as maneiras diferentes que você pode usar a função
+<CODE>print()</CODE>. Caracteres de escape são usados para caracteres que são difíceis ou
+impossíveis de digitar no código com o teclado. Eles são digitados nas sequências de caracteres
+começando com uma barra invertida \ seguida de uma letra para o caractere de
+escape. Por exemplo, <CODE>\n</CODE> seria uma quebra de linha. Para incluir uma barra
+invertida em uma sequência de caracteres, você usaria o caractere de escape \\.
+</P>
+<P>
+A função <CODE>print()</CODE> adiciona automaticamente um caractere de quebra de linha no
+final da sequência de caracteres que nós passamos para ser mostrada na tela. A maior parte do
+tempo, isto é desejável. Mas às vezes nós não queremos um caractere de quebra de
+linha no fim. Para mudar isso, nós passamos o argumento chave <CODE>end</CODE> com uma
+sequência de caracteres vazia. Por exemplo, para mostrar "spam" na tela sem quebra de linha, você
+usaria <CODE>print('spam', end='')</CODE>.
+</P>
+<P>
+Adicionando este novo nível de controle ao texto que mostramos na tela, temos
+muito mais maneiras flexíveis de mostrar o texto exatamente como queremos.
+</P>
+
+<!-- html code generated by txt2tags 2.6b1 (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags -t html cap1.t2t cap3.t2t cap5.t2t cap8.t2t -->
+</BODY></HTML>
