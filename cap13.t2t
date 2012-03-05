@@ -678,10 +678,12 @@ quer plantar um sonar.
 %        hline = '    ' # initial space for the numbers down the left side of the board
 %        for i in range(1, 6):
 %            hline += (' ' * 9) + str(i)
+```
         # Desenha a estrutura tabuleiro.
         hline = '    ' # espaço inicial para os números do lado esquerdo do tabuleiro
         for i in range(1, 6):
             hline += (' ' * 9) + str(i)
+```
 
 %Let's look again at the top part of the board, this time with plus signs
 %instead of blank spaces so we can count the spaces easier:
@@ -693,59 +695,163 @@ os espaços facilmente:
 Figura 13-3: O espaçamento que usamos para imprimir o topo do tabuleiro do 
 jogo.
 
-The numbers on the first line which mark the tens position all have nine spaces in between them, and there are thirteen spaces in front of the 1. We are going to create a string with this line and store it in a variable named hline.
 
-        # print the numbers across the top
+%The numbers on the first line which mark the tens position all have nine spaces
+%in between them, and there are thirteen spaces in front of the 1. We are going
+%to create a string with this line and store it in a variable named hline.
+Os números na primeira linha que marcam as 10 posições possuem todos 9 espaços
+entre eles, e existem 13 espaços na frente do 1. Nós iremos criar uma string
+com essa linha e armazená-la em uma variável chamada hline.
+
+```
+        # imprime os números pelo topo
         print(hline)
         print('   ' + ('0123456789' * 6))
         print()
+```
 
-To print the numbers across the top of the sonar board, we first print the contents of the hline variable. Then on the next line, we print three spaces (so that this row lines up correctly), and then print the string '012345678901234567890123456789012345678901234567890123456789'. But this is tedious to type into the source, so instead we type ('0123456789' * 6) which evaluates to the same string.
-Drawing the Rows of the Ocean
+%To print the numbers across the top of the sonar board, we first print the
+%contents of the hline variable. Then on the next line, we print three spaces
+%(so that this row lines up correctly), and then print the string
+%'012345678901234567890123456789012345678901234567890123456789'. But this is
+%tedious to type into the source, so instead we type ('0123456789' * 6) which
+%evaluates to the same string.
+Para imprimir os números pelo topo do tabuleiro do sonar, nós primeiro
+imprimimos o conteúdo da variável hline. Então, na próxima linha, nós imprimimos
+três espaços (de forma que essa linha apareça corretamente), e então imprimimos
+a string '012345678901234567890123456789012345678901234567890123456789'. Mas,
+digitar isso no código é entediante, então nós utilizamos ('0123456789' * 6),
+que é avaliada como a mesma string.
 
-        # print each of the 15 rows
+
+%Drawing the Rows of the Ocean
+==Desenhando as Linhas do Oceano==
+
+%        # print each of the 15 rows
+%        for i in range(15):
+%            # single-digit numbers need to be padded with an extra space
+%            if i < 10:
+%                extraSpace = ' '
+%            else:
+%                extraSpace = ''
+%            print('%s%s %s %s' % (extraSpace, i, getRow(board, i), i))
+```
+        # imprime cada uma das 15 linhas
         for i in range(15):
-            # single-digit numbers need to be padded with an extra space
+            # números de um dígito devem ser preenchidos com espaços-extra
             if i < 10:
                 extraSpace = ' '
             else:
                 extraSpace = ''
             print('%s%s %s %s' % (extraSpace, i, getRow(board, i), i))
+```
 
-Now we print the each row of the board, including the numbers down the side to label the Y-axis. We use the for loop to print rows 0 through 14 on the board, along with the row numbers on either side of the board.
 
-We have a small problem. Numbers with only one digit (like 0, 1, 2, and so on) only take up one space when we print them out, but numbers with two digits (like 10, 11, and 12) take up two spaces. This means the rows might not line up and would look like this:
+%Now we print the each row of the board, including the numbers down the side to
+%label the Y-axis. We use the for loop to print rows 0 through 14 on the board,
+%along with the row numbers on either side of the board.
+Agora nós imprimimos cada linha do tabuleiro, incluindo os números que rotulam
+o eixo Y. Nós usamos o loop for para imprimir as linhas 0 a 14 no tabuleiro,
+juntamente com os números das linhas em cada lado do tabuleiro.
+
+
+%We have a small problem. Numbers with only one digit (like 0, 1, 2, and so on)
+%only take up one space when we print them out, but numbers with two digits
+%(like 10, 11, and 12) take up two spaces. This means the rows might not line
+%up and would look like this:
+Nós temos um pequeno problema. Números com apenas um dígito (como 0, 1, 2 e
+assim por diante) ocupam somente um espaço quando imprimimos eles, mas
+números com dois dígitos (como 10, 11 e 12) ocupam dois espaços. Isso
+significa que as linhas não irão se alinhar e irão se parecer com isso:
+
+
+```
 8 ~~`~`~~```~``~~``~~~``~~`~`~~`~`~```~```~~~```~~~~~~`~`~~~~` 8
 9 ```~``~`~~~`~~```~``~``~~~```~````~```~`~~`~~~~~`~``~~~~~``` 9
 10 `~~~~```~`~````~`~`~~``~`~~~~`~``~``~```~~```````~`~``~````` 10
 11 ~~`~`~~`~``~`~~~````````````````~~`````~`~~``~`~~~~`~~~`~~`~ 11
+```
 
-The solution is easy. We just add a space in front of all the single-digit numbers. The if-else statement that starts on line 21 does this. We will print the variable extraSpace when we print the row, and if i is less than 10 (which means it will have only one digit), we assign a single space string to extraSpace. Otherwise, we set extraSpace to be a blank string. This way, all of our rows will line up when we print them.
+%The solution is easy. We just add a space in front of all the single-digit
+%numbers. The if-else statement that starts on line 21 does this. We will print
+%the variable extraSpace when we print the row, and if i is less than 10 (which
+%means it will have only one digit), we assign a single space string to
+%extraSpace. Otherwise, we set extraSpace to be a blank string. This way, all
+%of our rows will line up when we print them.
+A solução é simples. Nós apenas adicionamos um espaço em frente a todos os
+números de um dígito. A instrução if-else que inicia na linha 21 faz isso. Nós
+iremos imprimir a variável extraSpace quando imprimimos a linha, e se i for menor
+que 10 (o que significa que tem apenas um dígito), nós adicionamos uma string de
+espaço simples para extraSpace. Caso contrário, nós iremos setar extraSpace para
+uma string vazia. Assim, todas nossas linhas irão estar alinhadas quando as
+imprimirmos.
 
-The getRow() function will return a string representing the row number we pass it. Its two parameters are the board data structure stored in the board variable and a row number. We will look at this function next.
-Drawing the X-coordinates Along the Bottom
 
-        # print the numbers across the bottom
+%The getRow() function will return a string representing the row number we pass
+%it. Its two parameters are the board data structure stored in the board
+%variable and a row number. We will look at this function next.
+A função ``getRow()`` irá retornar uma string representando o número da linha
+que passarmos para ela. Seus dois parâmetros são a estrutura de dados que
+representa o tabuleiro, armazenada na variável ``board`` e um número de linha.
+Nós iremos dar uma olhada essa função em seguida.
+
+
+%Drawing the X-coordinates Along the Bottom
+==Desenhando as coordenadas X na base==
+```
+        # imprime os números na base
         print()
         print('   ' + ('0123456789' * 6))
         print(hline)
+```
 
-This code is similar to lines 13 to 16. This will print the X-axis coordinates along the bottom of the screen.
-Getting the State of a Row in the Ocean
+%This code is similar to lines 13 to 16. This will print the X-axis coordinates
+%along the bottom of the screen.
+Esse código é similiar às linhas 13 a 16. Ele irá imprimir as coordenadas do
+eixo X na base da tela.
 
+
+%Getting the State of a Row in the Ocean
+==Obtendo o Estado de uma Linha no Oceano==
+
+```
     def getRow(board, row):
-        # Return a string from the board data structure at a certain row.
+        # Retorna uma string da estrutura de dados tabuleiro em uma certa linha.
         boardRow = ''
         for i in range(60):
             boardRow += board[i][row]
         return boardRow
+```
 
-This function constructs a string called boardRow from the characters stored in board. First we set boardRow to the blank string. The row number (which is the Y coordinate) is passed as a parameter. The string we want is made by concatenating board[0][row], board[1][row], board[2][row], and so on up to board[59][row]. (This is because the row is made up of 60 characters, from index 0 to index 59.)
+%This function constructs a string called boardRow from the characters stored in
+%board. First we set boardRow to the blank string. The row number (which is the
+%Y coordinate) is passed as a parameter. The string we want is made by
+%concatenating board[0][row], board[1][row], board[2][row], and so on up to
+%board[59][row]. (This is because the row is made up of 60 characters, from
+%index 0 to index 59.)
+Essa função constrói uma string chamada ``boardRow`` através dos caracteres
+armazenados na variável ``board``. Primeiro, nós definimos ``boardRow``  como
+uma string vazia. O número da linha (que é a coordenada Y) é passado como
+parâmetro. A string que queremos é composta concatendando ``board[0][row]``,
+``board[1][row]``, ``board[2][row]``, e assim sucessivamente até
+``board[59][row]``. (Isso porque a linha é composta por 60 caracteres, do índice
+0 ao índice 59.)
 
-The for loop iterates from integers 0 to 59. On each iteration the next character in the board data structure is copied on to the end of boardRow. By the time the loop is done, boardRow is fully formed, so we return it.
-How the Code Works: Lines 40 to 62
+%The for loop iterates from integers 0 to 59. On each iteration the next
+%character in the board data structure is copied on to the end of boardRow. By
+%the time the loop is done, boardRow is fully formed, so we return it.
+O laço ``for`` itera sobre os inteiros de 0 a 59. A cada iteração, o caractere
+seguinte na estrutura de dados tabuleiro é copiada para o fim de ``boardRow``.
+Quando o loop terminar sua execução, ``boardRow`` estará completamente formada,
+então nós iremos retorná-la.
 
-Now that we have a function to print a given board data structure to the string, let's turn to the other functions that we will need. At the start of the game, we will need to create a new game board data structure (kind of like a blank Tic Tac Toe board) and also place treasure chests randomly around the board. We should also create a function that can tell if the coordinates entered by the player are a valid move or not.
+
+%How the Code Works: Lines 40 to 62
+
+%Now that we have a function to print a given board data structure to the string, let's turn to the other functions that we will need. At the start of the game, we will need to create a new game board data structure (kind of like a blank Tic Tac Toe board) and also place treasure chests randomly around the board. We should also create a function that can tell if the coordinates entered by the player are a valid move or not.
+
+
+
 Creating a New Game Board
 
     def getNewBoard():
